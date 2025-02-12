@@ -23,6 +23,11 @@
             100% { transform: translateY(-100vh); }
         }
 
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
         .heart {
             position: absolute;
             font-size: 2em;
@@ -59,14 +64,14 @@
             width: 200px;
             height: 200px;
             margin-top: 20px;
-            opacity: 0; /* Start with opacity 0 */
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
     </style>
     <script>
         function showGifAndRedirect() {
             const gif = document.querySelector('.gif');
             gif.style.display = 'block';
-            gif.style.animation = 'fadeIn 2s forwards';
 
             setTimeout(() => {
                 location.href = 'index.html';
@@ -91,3 +96,4 @@
     <img src="https://media.tenor.com/QWSXGYQHn4oAAAAM/yippee-iluvmybf.gif" alt="Funny GIF" class="gif">
 </body>
 </html>
+
