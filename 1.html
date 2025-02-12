@@ -15,6 +15,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            flex-direction: column;
         }
 
         @keyframes gradientFlow {
@@ -28,12 +29,11 @@
             font-size: 3em;
             font-weight: bold;
             text-align: center;
-            margin-top: -200px; /* Adjust based on your layout needs */
         }
 
         .quiz-container {
             text-align: center;
-            margin-top: -100px;
+            margin-top: 20px;
         }
 
         .quiz-question {
@@ -56,7 +56,7 @@
             border-radius: 8px;
         }
 
-        .start-button, .submit-button, .next-button {
+        .submit-button, .next-button {
             background-color: #4CAF50;
             border: none;
             color: white;
@@ -97,29 +97,27 @@
     </script>
 </head>
 <body>
-    <div>
-        <h1>Valentines Escape Room Hunt For Kaylee</h1>
-        <div class="quiz-container">
-            <div class="quiz-question">
-                What is the capital of France?
-            </div>
-            <div class="quiz-options">
-                <label class="quiz-option">
-                    <input type="radio" name="quiz" value="incorrect"> Rome
-                </label>
-                <label class="quiz-option">
-                    <input type="radio" name="quiz" value="incorrect"> Berlin
-                </label>
-                <label class="quiz-option">
-                    <input type="radio" name="quiz" value="correct"> Paris
-                </label>
-                <label class="quiz-option">
-                    <input type="radio" name="quiz" value="incorrect"> Madrid
-                </label>
-            </div>
-            <button class="submit-button" onclick="checkAnswer()">Submit</button>
+    <h1>Valentines Escape Room For Kaylee</h1>
+    <div class="quiz-container">
+        <div class="quiz-question">
+            When did we start dating?
         </div>
-        <button class="next-button" onclick="location.href='2.html'">Next</button>
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="quiz" value="incorrect"> 1/2/2011
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="quiz" value="incorrect"> 12/19/24
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="quiz" value="correct"> 9/29/24
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="quiz" value="incorrect"> 3/03/23
+            </label>
+        </div>
+        <button class="submit-button" onclick="checkAnswer()">Submit</button>
     </div>
+    <button class="next-button" onclick="location.href='2.html'">Next</button>
 </body>
 </html>
