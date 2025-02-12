@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentines Escape Room Quiz</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffd1dc 25%, #ff80ab 50%, #ffd1dc 75%);
+            background-size: 200% 200%;
+            animation: gradientFlow 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            color: #ff005c;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .quiz-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .quiz-question {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .quiz-option {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .submit-button, .next-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Hidden initially */
+        }
+    </style>
+    <script>
+        function checkAnswer() {
+            const options = document.getElementsByName('quiz');
+            let selectedOption;
+            for (const option of options) {
+                if (option.checked) {
+                    selectedOption = option.value;
+                    break;
+                }
+            }
+            if (selectedOption === 'correct') {
+                alert('Correct! Moving to the next question...');
+                document.querySelector('.next-button').style.display = 'inline-block';
+            } else {
+                alert('Incorrect, try again!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Valentines Escape Room For Kaylee</h1>
+    <div class="quiz-container">
+        <div class="quiz-question">
+            What Provoked What We Are Today?
+        </div>
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="quiz" value="incorrect"> Play Fortnite With
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="quiz" value="incorrect"> Needing Food
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="quiz" value="incorrect"> Bad Friends
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="quiz" value="correct"> Past Relationship
+            </label>
+        </div>
+        <button class="submit-button" onclick="checkAnswer()">Submit</button>
+    </div>
+    <button class="next-button" onclick="location.href='2.html'">Next</button>
+</body>
+</html>
