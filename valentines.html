@@ -23,6 +23,11 @@
             100% { transform: translateY(-100vh); }
         }
 
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
         .heart {
             position: absolute;
             width: 50px;
@@ -62,6 +67,7 @@
             width: 200px;
             height: 200px;
             margin-top: 20px;
+            opacity: 0; /* Start with opacity 0 */
         }
     </style>
     <script>
@@ -72,7 +78,7 @@
 
             setTimeout(() => {
                 location.href = 'index.html';
-            }, 4000);
+            }, 5000);
         }
 
         window.onload = function() {
@@ -90,6 +96,6 @@
     <div class="text-box">
         REALLY?? YOU'LL BE MY VALENTINE?! YAYYYYYYYYY!!!!!!
     </div>
-    <img src="https://media.tenor.com/QWSXGYQHn4oAAAAM/yippee-iluvmybf.gif" alt="Funny GIF" class="gif" style="opacity: 0;">
+    <img src="https://media.tenor.com/QWSXGYQHn4oAAAAM/yippee-iluvmybf.gif" alt="Funny GIF" class="gif">
 </body>
 </html>
