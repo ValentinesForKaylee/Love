@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentines Escape Room</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffd1dc 25%, #ff80ab 50%, #ffd1dc 75%);
+            background-size: 200% 200%;
+            animation: gradientFlow 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            color: #ff005c;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: -200px; /* Adjust based on your layout needs */
+        }
+
+        .start-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Valentines Escape Room Hunt For Kaylee</h1>
+        <button class="start-button" onclick="location.href='1.html'">Start</button>
+    </div>
+</body>
+</html>
